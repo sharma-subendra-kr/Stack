@@ -85,7 +85,7 @@ Stack.isEmpty = function () {
 };
 
 Stack.prototype.peak = function () {
-	return this.HEAD.d;
+	return this.HEAD?.d || null;
 };
 
 Stack.prototype.getData = function () {
