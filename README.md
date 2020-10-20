@@ -1,4 +1,4 @@
-# interval-tree-js
+# Stack
 Stack Data structure in JavaScript
 
 Stack, a JavaScript LIFO stack Data Structure.
