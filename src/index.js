@@ -69,6 +69,7 @@ Stack.prototype.pop = function (node) {
 	if (this.HEAD) {
 		var temp = this.HEAD;
 		this.HEAD = this.HEAD.next;
+		temp.next = null;
 		this.length--;
 		return temp.d;
 	} else {

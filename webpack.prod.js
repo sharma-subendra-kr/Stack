@@ -33,7 +33,7 @@ module.exports = merge(common, {
 		path: __dirname + "/dist/umd/",
 		filename:
 			process.env.MINIMIZE === "true"
-				? "interval.tree.js.production.min.js"
-				: "interval.tree.js.development.js",
+				? "stack.js.production.min.js"
+				: "stack.js.development.js",
 	},
 });
