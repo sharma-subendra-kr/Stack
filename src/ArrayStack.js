@@ -36,16 +36,23 @@ const Stack = function (options) {
 	this.ptr = -1;
 
 	if (options && Array.isArray(options.data)) {
-		this.constructStack(options.data);
+		this.constructStack(options.data, options.constructReverse);
 	}
 };
 
 Stack.prototype.constructor = Stack;
 
-Stack.prototype.constructStack = function (data) {
-	var len = data.length;
-	for (var i = len - 1; i >= 0; i--) {
-		this.push(data[i]);
+Stack.prototype.constructStack = function (data, constructReverse) {
+	const len = data.length;
+
+	if (!constructReverse) {
+		for (let i = 0; i < len; i++) {
+			this.push(data[i]);
+		}
+	} else {
+		for (let i = len - 1; i >= 0; i--) {
+			this.push(data[i]);
+		}
 	}
 };
 

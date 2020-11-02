@@ -36,7 +36,7 @@ function Stack(options) {
 	this.HEAD = null;
 
 	if (options && Array.isArray(options.data)) {
-		this.constructStack(options.data);
+		this.constructStack(options.data, options.constructReverse);
 	}
 }
 
@@ -49,10 +49,18 @@ Stack.prototype.constructNode = function (d) {
 	};
 };
 
-Stack.prototype.constructStack = function (data) {
+Stack.prototype.constructStack = function (data, constructReverse) {
 	var len = data.length;
-	for (var i = len - 1; i >= 0; i--) {
-		this.push(data[i]);
+	var i;
+
+	if (!constructReverse) {
+		for (i = 0; i < len; i++) {
+			this.push(data[i]);
+		}
+	} else {
+		for (i = len - 1; i >= 0; i--) {
+			this.push(data[i]);
+		}
 	}
 };
 
