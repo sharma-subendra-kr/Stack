@@ -30,8 +30,6 @@ Written by Subendra Kumar Sharma.
 */
 
 function Stack(options) {
-	this.maxSize = options.maxSize || null;
-
 	this.length = 0;
 	this.HEAD = null;
 
@@ -86,7 +84,7 @@ Stack.prototype.pop = function () {
 	// or return undefined
 };
 
-Stack.isEmpty = function () {
+Stack.prototype.isEmpty = function () {
 	if (this.HEAD) {
 		return false;
 	}
@@ -115,6 +113,7 @@ Stack.prototype.getSize = function () {
 
 Stack.prototype.empty = function () {
 	this.HEAD = null;
+	this.length = 0;
 };
 
 export default Stack;
