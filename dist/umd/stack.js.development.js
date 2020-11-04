@@ -253,8 +253,10 @@ Stack.prototype.getData = function () {
 };
 
 Stack.prototype.setData = function (data) {
+  var _this$options2;
+
   this.empty();
-  this.constructStack(data, this.options.constructReverse);
+  this.constructStack(data, (_this$options2 = this.options) === null || _this$options2 === void 0 ? void 0 : _this$options2.constructReverse);
 };
 
 Stack.prototype.getSize = function () {

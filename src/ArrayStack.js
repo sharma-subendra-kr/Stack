@@ -117,7 +117,7 @@ Stack.prototype.getData = function () {
 
 Stack.prototype.setData = function (data) {
 	this.empty();
-	this.constructStack(data, this.options.constructReverse);
+	this.constructStack(data, this.options?.constructReverse);
 };
 
 Stack.prototype.getSize = function () {
