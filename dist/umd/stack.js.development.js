@@ -163,6 +163,7 @@ Written by Subendra Kumar Sharma.
 
 */
 var Stack = function Stack(options) {
+  this.options = options;
   this.initialSize = options.initialSize || 100;
   this.length = this.initialSize;
   this.stack = new Array(this.length);
@@ -171,6 +172,8 @@ var Stack = function Stack(options) {
   if (options && Array.isArray(options.data)) {
     this.constructStack(options.data, options.constructReverse);
   }
+
+  delete this.options.data;
 };
 
 Stack.prototype.constructor = Stack;
@@ -245,6 +248,11 @@ Stack.prototype.getData = function () {
   }
 
   return arr;
+};
+
+Stack.prototype.setData = function (data) {
+  this.empty();
+  this.constructStack(data, this.options.constructReverse);
 };
 
 Stack.prototype.getSize = function () {

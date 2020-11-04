@@ -30,7 +30,10 @@ Written by Subendra Kumar Sharma.
 */
 
 const Stack = function (options) {
+	this.options = options;
+
 	this.initialSize = options.initialSize || 100;
+
 	this.length = this.initialSize;
 	this.stack = new Array(this.length);
 	this.ptr = -1;
@@ -38,6 +41,8 @@ const Stack = function (options) {
 	if (options && Array.isArray(options.data)) {
 		this.constructStack(options.data, options.constructReverse);
 	}
+
+	delete this.options.data;
 };
 
 Stack.prototype.constructor = Stack;
@@ -108,6 +113,11 @@ Stack.prototype.getData = function () {
 		arr[i] = this.stack[i];
 	}
 	return arr;
+};
+
+Stack.prototype.setData = function (data) {
+	this.empty();
+	this.constructStack(data, this.options.constructReverse);
 };
 
 Stack.prototype.getSize = function () {
