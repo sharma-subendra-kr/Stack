@@ -33,7 +33,7 @@ function Stack(options) {
 	this.length = 0;
 	this.HEAD = null;
 
-	if (options && Array.isArray(options.data)) {
+	if (Array.isArray(options?.data)) {
 		this.constructStack(options.data, options.constructReverse);
 	}
 }

@@ -32,17 +32,17 @@ Written by Subendra Kumar Sharma.
 const Stack = function (options) {
 	this.options = options;
 
-	this.initialSize = options.initialSize || 100;
+	this.initialSize = options?.initialSize || 100;
 
 	this.length = this.initialSize;
 	this.stack = new Array(this.length);
 	this.ptr = -1;
 
-	if (options && Array.isArray(options.data)) {
+	if (Array.isArray(options?.data)) {
 		this.constructStack(options.data, options.constructReverse);
 	}
 
-	delete this.options.data;
+	delete this.options?.data;
 };
 
 Stack.prototype.constructor = Stack;

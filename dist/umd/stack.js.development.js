@@ -163,17 +163,19 @@ Written by Subendra Kumar Sharma.
 
 */
 var Stack = function Stack(options) {
+  var _this$options;
+
   this.options = options;
-  this.initialSize = options.initialSize || 100;
+  this.initialSize = (options === null || options === void 0 ? void 0 : options.initialSize) || 100;
   this.length = this.initialSize;
   this.stack = new Array(this.length);
   this.ptr = -1;
 
-  if (options && Array.isArray(options.data)) {
+  if (Array.isArray(options === null || options === void 0 ? void 0 : options.data)) {
     this.constructStack(options.data, options.constructReverse);
   }
 
-  delete this.options.data;
+  (_this$options = this.options) === null || _this$options === void 0 ? true : delete _this$options.data;
 };
 
 Stack.prototype.constructor = Stack;
@@ -305,7 +307,7 @@ function ListStack_Stack(options) {
   this.length = 0;
   this.HEAD = null;
 
-  if (options && Array.isArray(options.data)) {
+  if (Array.isArray(options === null || options === void 0 ? void 0 : options.data)) {
     this.constructStack(options.data, options.constructReverse);
   }
 }
