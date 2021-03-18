@@ -100,7 +100,7 @@ Stack.prototype.isEmpty = function () {
 	return false;
 };
 
-Stack.prototype.peak = function () {
+Stack.prototype.peek = function () {
 	if (this.ptr >= 0) {
 		return this.stack[this.ptr];
 	}
