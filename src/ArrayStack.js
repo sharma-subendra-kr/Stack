@@ -45,8 +45,6 @@ const Stack = function (options) {
 	delete this.options?.data;
 };
 
-Stack.prototype.constructor = Stack;
-
 Stack.prototype.constructStack = function (data, constructReverse) {
 	const len = data.length;
 
