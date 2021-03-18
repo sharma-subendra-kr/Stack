@@ -38,8 +38,6 @@ function Stack(options) {
 	}
 }
 
-Stack.prototype.constructor = Stack;
-
 Stack.prototype.constructNode = function (d) {
 	return {
 		next: null,
@@ -91,7 +89,7 @@ Stack.prototype.isEmpty = function () {
 	return true;
 };
 
-Stack.prototype.peak = function () {
+Stack.prototype.peek = function () {
 	return this.HEAD?.d;
 };
 
