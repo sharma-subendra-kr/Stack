@@ -178,8 +178,6 @@ var Stack = function Stack(options) {
   (_this$options = this.options) === null || _this$options === void 0 ? true : delete _this$options.data;
 };
 
-Stack.prototype.constructor = Stack;
-
 Stack.prototype.constructStack = function (data, constructReverse) {
   var len = data.length;
 
@@ -235,7 +233,7 @@ Stack.prototype.isEmpty = function () {
   return false;
 };
 
-Stack.prototype.peak = function () {
+Stack.prototype.peek = function () {
   if (this.ptr >= 0) {
     return this.stack[this.ptr];
   } // or return undefined
@@ -314,8 +312,6 @@ function ListStack_Stack(options) {
   }
 }
 
-ListStack_Stack.prototype.constructor = ListStack_Stack;
-
 ListStack_Stack.prototype.constructNode = function (d) {
   return {
     next: null,
@@ -370,7 +366,7 @@ ListStack_Stack.prototype.isEmpty = function () {
   return true;
 };
 
-ListStack_Stack.prototype.peak = function () {
+ListStack_Stack.prototype.peek = function () {
   var _this$HEAD;
 
   return (_this$HEAD = this.HEAD) === null || _this$HEAD === void 0 ? void 0 : _this$HEAD.d;
