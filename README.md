@@ -3,7 +3,7 @@ Stack Data structure in JavaScript
 
 Stack, a JavaScript LIFO stack Data Structure.
 
-Copyright © 2019-2020 Subendra Kumar Sharma. All Rights reserved. (jobs.sharma.subendra.kr@gmail.com)
+Copyright © 2019-2020 Subendra Kumar Sharma. All Rights reserved.
 
 This file is part of Stack.
 
