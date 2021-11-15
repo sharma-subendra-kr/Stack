@@ -2,7 +2,7 @@
   "name": "@sharma-subendra-kr/stack",
   "version": "1.0.1",
   "description": "Stack, a JavaScript LIFO stack Data Structure.",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --config webpack.dev.js",
